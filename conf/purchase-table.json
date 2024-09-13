@@ -1,0 +1,25 @@
+{
+    "tableName": "Purchase",
+    "tableType": "OFFLINE",
+    "segmentsConfig": {
+      "segmentPushType": "APPEND",
+      "segmentAssignmentStrategy": "BalanceNumSegmentAssignmentStrategy",
+      "schemaName": "Purchase",
+      "replication": "1"
+    },
+    "tenants": {
+    },
+    "tableIndexConfig": {
+      "loadMode": "MMAP",
+      "noDictionaryColumns": [
+
+      ],
+      "invertedIndexColumns": [
+      ]
+    },
+    "metadata": {
+      "customConfigs": {
+      }
+    }
+  }
+  

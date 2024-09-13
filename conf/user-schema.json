@@ -1,0 +1,33 @@
+{
+    "schemaName": "User",
+    "dimensionFieldSpecs": [
+      {
+        "name": "ID",
+        "dataType": "STRING"
+      },
+      {
+        "name": "Name",
+        "dataType": "STRING"
+      },
+      {
+        "name": "Phone",
+        "dataType": "STRING"
+      },
+      {
+        "name": "Address",
+        "dataType": "STRING"
+      },
+      {
+        "name": "City",
+        "dataType": "STRING"
+      },
+      {
+        "name": "State",
+        "dataType": "STRING"
+      },
+      {
+        "name": "ZIP",
+        "dataType": "STRING"
+      }
+    ]
+}

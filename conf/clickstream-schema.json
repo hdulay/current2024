@@ -1,0 +1,30 @@
+{
+    "schemaName": "Clickstream",
+    "dimensionFieldSpecs": [
+      {
+        "name": "user_id",
+        "dataType": "STRING"
+      },
+      {
+        "name": "product_id",
+        "dataType": "STRING"
+      },
+      {
+        "name": "event_type",
+        "dataType": "STRING"
+      },
+      {
+        "name": "duration",
+        "dataType": "LONG"
+      }
+    ],
+    "dateTimeFieldSpecs": [
+      {
+        "name": "timestamp",
+        "dataType": "TIMESTAMP",
+        "format": "1:MILLISECONDS:EPOCH",
+        "granularity": "1:MILLISECONDS"
+      }
+    ]
+  }
+  

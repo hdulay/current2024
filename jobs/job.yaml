@@ -1,0 +1,38 @@
+executionFrameworkSpec:
+  name: 'standalone'
+  segmentGenerationJobRunnerClassName: 'org.apache.pinot.plugin.ingestion.batch.standalone.SegmentGenerationJobRunner'
+  segmentTarPushJobRunnerClassName: 'org.apache.pinot.plugin.ingestion.batch.standalone.SegmentTarPushJobRunner'
+  segmentUriPushJobRunnerClassName: 'org.apache.pinot.plugin.ingestion.batch.standalone.SegmentUriPushJobRunner'
+jobType: SegmentCreationAndTarPush
+
+inputDirURI: '${DATA}'
+includeFileNamePattern: 'glob:**/*${FILE}.parquet'
+outputDirURI: 'segments'
+overwriteOutput: true
+
+pinotFSSpecs:
+    - scheme: file
+      className: org.apache.pinot.spi.filesystem.LocalPinotFS
+
+recordReaderSpec:
+  dataFormat: 'parquet'
+  className: 'org.apache.pinot.plugin.inputformat.parquet.ParquetNativeRecordReader'
+
+# recordReaderSpec:
+#   dataFormat: 'csv'
+#   className: 'org.apache.pinot.plugin.inputformat.csv.CSVRecordReader'
+#   configClassName: 'org.apache.pinot.plugin.inputformat.csv.CSVRecordReaderConfig'
+#   configs:
+#     delimiter: ','
+
+tableSpec:
+  tableName: '${PINOT_WORKSPACE}.${TABLE}'
+  schemaURI: '${PINOT_CONTROLLER}/tables/${PINOT_WORKSPACE}.${TABLE}/schema'
+  tableConfigURI: '${PINOT_CONTROLLER}/tables/${PINOT_WORKSPACE}.${TABLE}'
+
+pinotClusterSpecs:
+    - controllerURI: '${PINOT_CONTROLLER}'
+
+pushJobSpec:
+  pushAttempts: 2
+  pushRetryIntervalMillis: 1000

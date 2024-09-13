@@ -1,0 +1,38 @@
+{
+  "tableName": "Product",
+  "tableType": "OFFLINE",
+  "segmentsConfig": {
+    "segmentPushType": "APPEND",
+    "segmentAssignmentStrategy": "BalanceNumSegmentAssignmentStrategy",
+    "schemaName": "Product",
+    "replication": "1"
+  },
+  "tenants": {},
+  "tableIndexConfig": {
+    "loadMode": "MMAP",
+    "noDictionaryColumns": [],
+    "invertedIndexColumns": []
+  },
+  "metadata": {
+    "customConfigs": {}
+  },
+  "fieldConfigList": [
+    {
+      "encodingType": "RAW",
+      "indexType": "VECTOR",
+      "name": "embedding",
+      "properties": {
+        "vectorIndexType": "HNSW",
+        "vectorDimension": 2048,
+        "vectorDistanceFunction": "COSINE",
+        "version": 1
+      }
+    },
+    {
+      "name": "ID",
+      "indexes": {
+        "inverted": {}
+      }
+    }
+  ]
+}

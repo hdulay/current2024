@@ -1,0 +1,7 @@
+.env
+.DS_Store
+.venv
+data
+logs
+.vscode
+mixed_wiki

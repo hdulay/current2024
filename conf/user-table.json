@@ -1,0 +1,25 @@
+{
+    "tableName": "User",
+    "tableType": "OFFLINE",
+    "segmentsConfig": {
+      "segmentPushType": "APPEND",
+      "segmentAssignmentStrategy": "BalanceNumSegmentAssignmentStrategy",
+      "schemaName": "User",
+      "replication": "1"
+    },
+    "tenants": {
+    },
+    "tableIndexConfig": {
+      "loadMode": "MMAP",
+      "noDictionaryColumns": [
+
+      ],
+      "invertedIndexColumns": [
+      ]
+    },
+    "metadata": {
+      "customConfigs": {
+      }
+    }
+  }
+  

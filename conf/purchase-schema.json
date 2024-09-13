@@ -1,0 +1,28 @@
+{
+    "schemaName": "Purchase",
+    "dimensionFieldSpecs": [
+      {
+        "name": "user_id",
+        "dataType": "STRING"
+      },
+      {
+        "name": "product_id",
+        "dataType": "STRING"
+      }
+    ],
+    "metricFieldSpecs": [
+      {
+        "name": "quantity",
+        "dataType": "INT"
+      }
+    ],
+    "dateTimeFieldSpecs": [
+      {
+        "name": "purchase_date",
+        "dataType": "TIMESTAMP",
+        "format": "1:MILLISECONDS:EPOCH",
+        "granularity": "1:MILLISECONDS"
+      }
+    ]
+  }
+  

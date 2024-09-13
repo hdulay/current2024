@@ -1,0 +1,23 @@
+{
+    "schemaName": "Product",
+    "dimensionFieldSpecs": [
+      {
+        "name": "ID",
+        "dataType": "STRING"
+      },
+      {
+        "name": "Name",
+        "dataType": "STRING"
+      },
+      {
+        "name": "Description",
+        "dataType": "STRING"
+      },
+      {
+        "name": "embedding",
+        "dataType": "FLOAT",
+        "singleValueField": false
+      }
+    ]
+  }
+  
